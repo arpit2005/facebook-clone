@@ -1,0 +1,55 @@
+.left-panel {
+  width: 23%;
+  min-width: 270px;
+  height: 100%;
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  top: 56px;
+  z-index: 1;
+  background-color: #f2f0f5;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 70px;
+}
+
+.left-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-panel .list ul li {
+  padding: 8px 5px 8px 10px;
+  list-style-type: none;
+  margin: 0px 2px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s all linear;
+  -webkit-transition: 0.3s all linear;
+  -moz-transition: 0.3s all linear;
+  -ms-transition: 0.3s all linear;
+  -o-transition: 0.3s all linear;
+}
+
+.left-panel .list ul li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.left-panel .list {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 0 10px;
+}
+
+.footer ul li {
+  margin: 0 3px;
+  display: inline-block;
+  font-size: 12px;
+  opacity: 0.8;
+}

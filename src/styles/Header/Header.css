@@ -1,0 +1,98 @@
+.header-body {
+  background-color: white;
+  height: 57px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.logo {
+  margin-right: 10px;
+  padding-top: 5px;
+}
+
+.logo img {
+  cursor: pointer;
+  height: 42px;
+}
+
+.search-bar {
+  position: relative;
+  flex-basis: 23.5%;
+}
+
+.search-bar > span .fa-search {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  left: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.search-bar > input {
+  background: #f0f2f5;
+  width: 235px;
+  padding: 12px;
+  padding-left: 32px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  font-size: 15px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.menu-items {
+}
+
+.menu-items span {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.menu-items span:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.menu-items span i {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.options {
+  position: absolute;
+  right: 15px;
+}
+
+.options button {
+  cursor: pointer;
+  margin: 0 5px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
