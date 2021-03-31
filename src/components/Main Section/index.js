@@ -10,6 +10,7 @@ import CareIcon from '../../assets/care.png';
 import AngryIcon from '../../assets/angry.png';
 
 function MainSection({ device }) {
+    console.log(device);
     const classes = useStyles(device);
 
     return (
@@ -26,13 +27,16 @@ function MainSection({ device }) {
                 </div>
                 : ''
                 }
-                <div className="cards">
+                {
+                    device === 'xs' ? '' :
+                        <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
                         <span>Arpit</span><br />
                         <span>Sharma</span>
                     </div>
-                </div>
+                </div> 
+                }                
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
