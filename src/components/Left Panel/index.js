@@ -1,21 +1,23 @@
-import React from 'react'
-import '../../styles/Left Panel/LeftPanel.css'
-import avatar from '../../assets/avatar.jpg'
-import { list } from './list'
+import React from 'react';
+import { useStyles } from '../../styles/Left Panel/LeftPaneStyles';
+import avatar from '../../assets/avatar.jpg';
+import { list } from './list';
 
 function LeftPanel() {
+    const classes = useStyles();
+
     return (
-        <div className="left-panel">
-            <div className="list">
+        <div className={classes.leftPanel}>
+            <div className={classes.list}>
                 <ul>
-                    <li>
+                    <li className={classes.listItem}>
                         <img class="ui avatar image" style={{ height: 35, width: 35, marginRight: 10 }} src={avatar} alt="icon" /> 
                         <span style={{ fontWeight: 600 }}>Arpit Sharma</span>
                     </li>
                     {
                         list.map(value => {
                             return (
-                                <li>
+                                <li className={classes.listItem}>
                                     <img class="ui avatar image" style={{ height: 35, width: 35, marginRight: 10 }} src={value.link} alt="icon" /> 
                                     <span style={{ fontWeight: 600 }}>{value.title}</span>
                                 </li>
@@ -24,7 +26,7 @@ function LeftPanel() {
                     }
                 </ul>
             </div>
-            <div className="footer">
+            <div className={classes.footer}>
                 <ul>
                     <li><a href="/">Privacy</a></li>
                     <li>.</li>

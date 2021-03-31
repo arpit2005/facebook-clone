@@ -1,11 +1,20 @@
-import React from 'react'
-import '../../styles/Main Section/MainSection.css'
-import Picture from '../../assets/avatar.jpg'
+import React from 'react';
+import { useStyles } from '../../styles/Main Section/MainSectionStyles';
+import Picture from '../../assets/avatar.jpg';
+import LikeIcon from '../../assets/like.png';
+import LoveIcon from '../../assets/love.png';
+import WowIcon from '../../assets/wow.png';
+import SadIcon from '../../assets/sad.png';
+import HahaIcon from '../../assets/haha.png';
+import CareIcon from '../../assets/care.png';
+import AngryIcon from '../../assets/angry.png';
 
 function MainSection() {
+    const classes = useStyles();
+
     return (
-        <div className="main-section">
-            <div className="story-cards">
+        <div className={classes.mainSection}>
+            <div className={classes.storyCards}>
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
@@ -42,22 +51,84 @@ function MainSection() {
                     </div>
                 </div>
             </div>
-            <div className="create-post">
-                <div>
-                    <img class="ui avatar image" style={{ height: 40, width: 40, marginRight: 10 }} src={Picture} alt="icon" />
-                    <div className="search-bar">
-                        <input type="text" placeholder={`What's on your mind, Arpit?`} />
-                    </div>
+            <div className={classes.createPost}>
+                <div className={classes.createPostHeaderBox}>
+                    <img className={classes.createPostAvatar} src={Picture} alt="icon" />
+                    <span className={classes.mainSectionSearchBar}>
+                        {`What's on your mind, Arpit?`}
+                    </span>
+                </div>
+                <div className={classes.createPostDivider} />
+                <div className={classes.createPostOptions}>
+                    <span className={classes.createPostOptionsBox}>
+                        <i class="video icon" style={{ fontSize: 25, color: 'red' }}></i>&nbsp;<span>Live Video</span>
+                    </span>
+                    <span className={classes.createPostOptionsBox}>
+                        <i class="file image outline icon" style={{ fontSize: 25, color: 'green' }}></i>&nbsp;<span>Photo/Video</span>
+                    </span>
+                    <span className={classes.createPostOptionsBox}>
+                        <i class="smile outline icon" style={{ fontSize: 25, color: 'orange' }}></i>&nbsp;<span>Feeling/Activity</span>
+                    </span>
                 </div>
             </div>
-            <div className="create-room">
+            <div className={classes.postsContainer}>
+                <div className={classes.postsHeader}>
+                    <img className={classes.postsHeaderAvatar} src={Picture} alt="icon" />
+                    <div>
+                        
+                        <span className={classes.postsHeaderName}>Arpit Sharma</span><br />
+                        <span className={classes.postsHeaderPostTime}>5h . <i className="fa fa-users" /></span>
+                    </div>
+                    <span className={classes.postsHeaderPostOptions}><i className="fa fa-ellipsis-h" /></span>
+                </div>
+                <div className={classes.postsTextBlock}>
+                    <span>It was a great coincidence to meet my Indian Astronomy Professor K. Ramasubramanian at the Airport. Doctorate in Theoretical Physics, Bachelors in Engineering and Masters in Sanskrit, his way of teaching will increase your respect towards ancient Indian Mathematicians manifold.</span>
+                </div>
+                <div className={classes.postsImageBlock}>
+                    <img src={Picture} style={{ width: '100%' }} alt="" />
+                </div>
+                <div className={classes.postsReactionsBlock}>
+                    <span><img src={LikeIcon} alt="like-icon" style={{ width: 20 }} /></span>
+                    <span><img src={LoveIcon} alt="love-icon" style={{ width: 20 }} /></span>
+                    <span><img src={CareIcon} alt="care-icon" style={{ width: 20 }} /></span>
+                    <span><img src={HahaIcon} alt="haha-icon" style={{ width: 20 }} /></span>
+                    <span><img src={WowIcon} alt="wow-icon" style={{ width: 20 }} /></span>                    
+                    <span><img src={SadIcon} alt="sad-icon" style={{ width: 20 }} /></span>
+                    <span><img src={AngryIcon} alt="angry-icon" style={{ width: 20 }} /></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div className={classes.createPostDivider} style={{ marginTop: 8 }} />
+                <div className={classes.postsReactionsBtnBlock}>
+                    <span style={{ fontSize: 15, opacity: 0.7, fontWeight: 600 }}><i className="fa fa-thumbs-up" />&nbsp; Like</span>
+                    <span style={{ fontSize: 15, opacity: 0.7, fontWeight: 600 }}><i className="fa fa-comment" />&nbsp; Comment</span>
+                    <span style={{ fontSize: 15, opacity: 0.7, fontWeight: 600 }}><i className="fa fa-share" />&nbsp; Share</span>
+                </div>
 
-            </div>
-            <div className="posts">
+                <div className={classes.createPostDivider} style={{ marginTop: 0 }} />
 
+                <div className={classes.postsCommentsBlock}>
+                    <img className={classes.postsCommentAvatar} src={Picture} alt="icon" />
+                    <div className={classes.postsCommentContainer}>
+                        <div className={classes.postsCommentText}>
+                            <span className={classes.postsCommentTextName}>Arpit Sharma</span><br/>
+                            <span>Dark desire is amazingly wild and hot.</span>
+                        </div>
+                        <div className={classes.postsCommentOptions}>
+                            <span className={classes.postsCommentOptionsLike}>Like</span>&nbsp;&nbsp;
+                            <span className={classes.postsCommentOptionsReply}>Reply</span>&nbsp;&nbsp;&nbsp;
+                            <span className={classes.postsCommentOptionsTime}>7h</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className={classes.postsCommentBoxBlock}>
+                    <img className={classes.postsCommentAvatar} src={Picture} alt="icon" />
+                    <input type="text" className={classes.postsCommentInput} placeholder="Write a comment..." />
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default MainSection
