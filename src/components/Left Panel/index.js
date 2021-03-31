@@ -11,15 +11,15 @@ function LeftPanel() {
             <div className={classes.list}>
                 <ul>
                     <li className={classes.listItem}>
-                        <img class="ui avatar image" style={{ height: 35, width: 35, marginRight: 10 }} src={avatar} alt="icon" /> 
-                        <span style={{ fontWeight: 600 }}>Arpit Sharma</span>
+                        <img src={avatar} alt="icon" /> 
+                        <span>Arpit Sharma</span>
                     </li>
                     {
-                        list.map(value => {
+                        list.map((value, index) => {
                             return (
-                                <li className={classes.listItem}>
-                                    <img class="ui avatar image" style={{ height: 35, width: 35, marginRight: 10 }} src={value.link} alt="icon" /> 
-                                    <span style={{ fontWeight: 600 }}>{value.title}</span>
+                                <li className={classes.listItem} key={index}>
+                                    <img src={value.link} alt="icon" /> 
+                                    <span>{value.title}</span>
                                 </li>
                             )
                         })

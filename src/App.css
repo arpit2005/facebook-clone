@@ -11,3 +11,8 @@ body {
   height: 100vh;
   position: relative;
 }
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+}

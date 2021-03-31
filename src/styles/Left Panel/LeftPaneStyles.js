@@ -24,6 +24,8 @@ export const useStyles = createUseStyles({
         marginBottom: 20,
     },
     listItem: {
+        display: 'flex',
+        alignItems: 'center',
         padding: '8px 5px 8px 10px',
         listStyleType: 'none',
         margin: '0px 2px',
@@ -31,10 +33,15 @@ export const useStyles = createUseStyles({
         transition: '0.3s all linear',
         '&:hover': {
             backgroundColor: 'rgba(0, 0, 0, 0.1)',
-        }
-        ,
+        },
         '& img': {
-            
+            height: 35,
+            width: 35,
+            marginRight: 10,
+            borderRadius: '50%'
+        },
+        '& span': {
+            fontWeight: 600
         }
     },
     footer: {

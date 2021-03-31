@@ -42,15 +42,27 @@ export const useStyles = createUseStyles({
         borderRadius: 100,
         fontSize: 15,
     },
+    searchBarInputResp: {
+        cursor: 'pointer',
+        background: '#f0f2f5',
+        width: 20,
+        padding: 12,
+        paddingLeft: 28,
+        border: 'none',
+        outline: 'none',
+        borderRadius: '50%',
+        fontSize: 15,
+    },
     menuItems: {        
         '& span': {
             cursor: 'pointer',
             display: 'inline-block',
             borderRadius: 10,
-            paddingLeft: 45,
-            paddingRight: 45,
+            paddingLeft: '3vw',
+            paddingRight: '3vw',
             marginLeft: 4,
             marginRight: 4,
+            background: 'rgba(0, 0, 0, 0.1)',
             '&:hover': {
             background: 'rgba(0, 0, 0, 0.1)',
             }  
@@ -63,6 +75,8 @@ export const useStyles = createUseStyles({
     },
 
     options: {
+        display: 'flex',
+        alignItems: 'center',
         position: 'absolute',
         right: 15,
         '& button': {
@@ -76,4 +90,16 @@ export const useStyles = createUseStyles({
             borderRadius: '50%',
         }
     },
+    userBlock: {
+        display: 'flex',
+        alignItems: 'center',
+        '& img': {
+            width: 35,
+            height: 35,
+            borderRadius: '50%'
+        },
+        '& span': {
+            fontWeight: 600
+        }
+    }
 });

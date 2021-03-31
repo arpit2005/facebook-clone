@@ -2,7 +2,12 @@ import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
     mainSection: {
-        width: '40%',
+        width: (device) => {
+            if (device === 'lg') return '45%';
+            if (device === 'md') return '60%';
+            if (device === 'sm') return '70%';
+            if (device === 'xs') return '90%';
+        },
         margin: '80px auto',
         display: 'flex',
         flexDirection: 'column',
@@ -109,7 +114,19 @@ export const useStyles = createUseStyles({
                 fontSize: 14,
                 fontWeight: 600,
                 opacity: 0.7,
-            }
+            },
+            '& .video-icon': {
+                fontSize: 25,
+                color: 'red'
+            },
+            '& .file-icon': {
+                fontSize: 25,
+                color: 'green'
+            },
+            '& .smile-icon': {
+                fontSize: 25,
+                color: 'orange'
+            },            
     },
 
     postsContainer: {
@@ -169,18 +186,29 @@ export const useStyles = createUseStyles({
         paddingTop: 15,
         paddingBottom: 10,
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        '& img': {
+            width: '100%'
+        }
     },
 
     postsReactionsBlock: {
         display: 'flex',
         paddingLeft: 15,
+        '& img': {
+            width: 20
+        }
     },
 
     postsReactionsBtnBlock: {
         display: 'flex',
         justifyContent: 'space-evenly',
-        padding: '10px 0 '
+        padding: '10px 0',
+        '& span': {
+            fontSize: 15,
+            opacity: 0.7,
+            fontWeight: 600
+        }
     },
 
     postsCommentsBlock: {

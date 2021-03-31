@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useStyles } from '../../styles/Main Section/MainSectionStyles';
 import Picture from '../../assets/avatar.jpg';
 import LikeIcon from '../../assets/like.png';
@@ -9,8 +9,8 @@ import HahaIcon from '../../assets/haha.png';
 import CareIcon from '../../assets/care.png';
 import AngryIcon from '../../assets/angry.png';
 
-function MainSection() {
-    const classes = useStyles();
+function MainSection({ device }) {
+    const classes = useStyles(device);
 
     return (
         <div className={classes.mainSection}>
@@ -61,13 +61,13 @@ function MainSection() {
                 <div className={classes.createPostDivider} />
                 <div className={classes.createPostOptions}>
                     <span className={classes.createPostOptionsBox}>
-                        <i class="video icon" style={{ fontSize: 25, color: 'red' }}></i>&nbsp;<span>Live Video</span>
+                        <i className="video icon video-icon"></i>&nbsp;<span>Live Video</span>
                     </span>
                     <span className={classes.createPostOptionsBox}>
-                        <i class="file image outline icon" style={{ fontSize: 25, color: 'green' }}></i>&nbsp;<span>Photo/Video</span>
+                        <i className="file image outline icon file-icon"></i>&nbsp;<span>Photo/Video</span>
                     </span>
                     <span className={classes.createPostOptionsBox}>
-                        <i class="smile outline icon" style={{ fontSize: 25, color: 'orange' }}></i>&nbsp;<span>Feeling/Activity</span>
+                        <i className="smile outline icon smile-icon"></i>&nbsp;<span>Feeling/Activity</span>
                     </span>
                 </div>
             </div>
@@ -85,24 +85,24 @@ function MainSection() {
                     <span>It was a great coincidence to meet my Indian Astronomy Professor K. Ramasubramanian at the Airport. Doctorate in Theoretical Physics, Bachelors in Engineering and Masters in Sanskrit, his way of teaching will increase your respect towards ancient Indian Mathematicians manifold.</span>
                 </div>
                 <div className={classes.postsImageBlock}>
-                    <img src={Picture} style={{ width: '100%' }} alt="" />
+                    <img src={Picture} alt="post" />
                 </div>
                 <div className={classes.postsReactionsBlock}>
-                    <span><img src={LikeIcon} alt="like-icon" style={{ width: 20 }} /></span>
-                    <span><img src={LoveIcon} alt="love-icon" style={{ width: 20 }} /></span>
-                    <span><img src={CareIcon} alt="care-icon" style={{ width: 20 }} /></span>
-                    <span><img src={HahaIcon} alt="haha-icon" style={{ width: 20 }} /></span>
-                    <span><img src={WowIcon} alt="wow-icon" style={{ width: 20 }} /></span>                    
-                    <span><img src={SadIcon} alt="sad-icon" style={{ width: 20 }} /></span>
-                    <span><img src={AngryIcon} alt="angry-icon" style={{ width: 20 }} /></span>
+                    <span><img src={LikeIcon} alt="like-icon"/></span>
+                    <span><img src={LoveIcon} alt="love-icon" /></span>
+                    <span><img src={CareIcon} alt="care-icon" /></span>
+                    <span><img src={HahaIcon} alt="haha-icon" /></span>
+                    <span><img src={WowIcon} alt="wow-icon" /></span>                    
+                    <span><img src={SadIcon} alt="sad-icon" /></span>
+                    <span><img src={AngryIcon} alt="angry-icon" /></span>
                     <span></span>
                     <span></span>
                 </div>
                 <div className={classes.createPostDivider} style={{ marginTop: 8 }} />
                 <div className={classes.postsReactionsBtnBlock}>
-                    <span style={{ fontSize: 15, opacity: 0.7, fontWeight: 600 }}><i className="fa fa-thumbs-up" />&nbsp; Like</span>
-                    <span style={{ fontSize: 15, opacity: 0.7, fontWeight: 600 }}><i className="fa fa-comment" />&nbsp; Comment</span>
-                    <span style={{ fontSize: 15, opacity: 0.7, fontWeight: 600 }}><i className="fa fa-share" />&nbsp; Share</span>
+                    <span><i className="fa fa-thumbs-up" />&nbsp; Like</span>
+                    <span><i className="fa fa-comment" />&nbsp; Comment</span>
+                    <span><i className="fa fa-share" />&nbsp; Share</span>
                 </div>
 
                 <div className={classes.createPostDivider} style={{ marginTop: 0 }} />
