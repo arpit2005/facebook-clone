@@ -62,7 +62,6 @@ export const useStyles = createUseStyles({
             paddingRight: '3vw',
             marginLeft: 4,
             marginRight: 4,
-            background: 'rgba(0, 0, 0, 0.1)',
             '&:hover': {
             background: 'rgba(0, 0, 0, 0.1)',
             }  

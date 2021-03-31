@@ -71,7 +71,7 @@ export const useStyles = createUseStyles({
     mainSectionSearchBar: {
         cursor: 'pointer',
         display: 'inline-block',
-        width: '85%',
+        width: '80%',
         cursor: 'pointer',
         background: '#f0f2f5',
         padding: 12,
@@ -102,7 +102,10 @@ export const useStyles = createUseStyles({
             display: 'inline-flex',
             padding: '10px 15px',
             borderRadius: 5,
-            width: '32%',
+            width: (device) => {
+                if (device === 'xs') return '40%';
+                return '32%';
+            },
             margin: '0 5px',
             justifyContent: 'center',
             alignItems: 'center',

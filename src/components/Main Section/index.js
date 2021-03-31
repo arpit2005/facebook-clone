@@ -26,6 +26,8 @@ function MainSection({ device }) {
                 </div>
                 : ''
                 }
+                {
+                device !== 'xs' ?
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
@@ -33,6 +35,8 @@ function MainSection({ device }) {
                         <span>Sharma</span>
                     </div>
                 </div>
+                : ''
+                }
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
@@ -70,9 +74,13 @@ function MainSection({ device }) {
                     <span className={classes.createPostOptionsBox}>
                         <i className="file image outline icon file-icon"></i>&nbsp;<span>Photo/Video</span>
                     </span>
-                    <span className={classes.createPostOptionsBox}>
-                        <i className="smile outline icon smile-icon"></i>&nbsp;<span>Feeling/Activity</span>
-                    </span>
+                    {
+                        device !== 'xs' ?
+                        <span className={classes.createPostOptionsBox}>
+                            <i className="smile outline icon smile-icon"></i>&nbsp;<span>Feeling/Activity</span>
+                        </span>
+                        : ''
+                    }
                 </div>
             </div>
             <div className={classes.postsContainer}>
