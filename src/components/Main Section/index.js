@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useStyles } from '../../styles/Main Section/MainSectionStyles';
 import Picture from '../../assets/avatar.jpg';
 import LikeIcon from '../../assets/like.png';
@@ -16,7 +16,7 @@ function MainSection({ device }) {
         <div className={classes.mainSection}>
             <div className={classes.storyCards}>
                 {
-                device !== 'xs' ?
+                device === 'lg' || device === 'md' || device === 'sm' ?
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
@@ -26,8 +26,6 @@ function MainSection({ device }) {
                 </div>
                 : ''
                 }
-                {
-                device !== 'xs' ?
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
@@ -35,8 +33,6 @@ function MainSection({ device }) {
                         <span>Sharma</span>
                     </div>
                 </div>
-                : ''
-                }
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
@@ -75,7 +71,7 @@ function MainSection({ device }) {
                         <i className="file image outline icon file-icon"></i>&nbsp;<span>Photo/Video</span>
                     </span>
                     {
-                        device !== 'xs' ?
+                        device === 'lg' || device === 'md' || device === 'sm' ?
                         <span className={classes.createPostOptionsBox}>
                             <i className="smile outline icon smile-icon"></i>&nbsp;<span>Feeling/Activity</span>
                         </span>

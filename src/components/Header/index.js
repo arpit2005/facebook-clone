@@ -4,7 +4,7 @@ import Logo from '../../assets/Facebook_Logo.png';
 import Avatar from '../../assets/avatar.jpg';
     
 function Header({ device }) {
-    const classes = useStyles();
+    const classes = useStyles(device);
 
     return (
         <div className={classes.headerBody}>
@@ -12,14 +12,11 @@ function Header({ device }) {
                 <img src={Logo} className={classes.logoImg} alt="logo" />
             </div>
             <div className={classes.searchBar}>
-                <span><i className='fa fa-search' /></span>               
-                {
-                    device === 'lg'
-                    ? < input className={classes.searchBarInput} type="text" placeholder="Search Facebook" /> : <input className={classes.searchBarInputResp} type="text" placeholder="Search Facebook" />
-                }
+                <span><i className='fa fa-search' /></span>   
+                < input className={classes.searchBarInput} type="text" placeholder="Search Facebook" />
             </div>
             {
-                device === 'lg' || device === 'md' ? 
+                device === 'lg' || device === 'md' || device === 'sm' ? 
                 <div className={classes.menuItems}>
                     <span><i className="fa fa-home" /></span>
                     <span><i className="fa fa-play-circle" /></span>
