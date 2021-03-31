@@ -15,6 +15,8 @@ function MainSection({ device }) {
     return (
         <div className={classes.mainSection}>
             <div className={classes.storyCards}>
+                {
+                device !== 'xs' ?
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">
@@ -22,6 +24,8 @@ function MainSection({ device }) {
                         <span>Sharma</span>
                     </div>
                 </div>
+                : ''
+                }
                 <div className="cards">
                     <img src={Picture} alt="story" />
                     <div className="story-username">

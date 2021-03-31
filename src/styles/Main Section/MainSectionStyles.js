@@ -3,10 +3,10 @@ import { createUseStyles } from 'react-jss';
 export const useStyles = createUseStyles({
     mainSection: {
         width: (device) => {
-            if (device === 'lg') return '45%';
+            if (device === 'lg') return '40%';
             if (device === 'md') return '60%';
             if (device === 'sm') return '70%';
-            if (device === 'xs') return '90%';
+            if (device === 'xs') return '98%';
         },
         margin: '80px auto',
         display: 'flex',
@@ -102,7 +102,7 @@ export const useStyles = createUseStyles({
             display: 'inline-flex',
             padding: '10px 15px',
             borderRadius: 5,
-            width: '30%',
+            width: '32%',
             margin: '0 5px',
             justifyContent: 'center',
             alignItems: 'center',
@@ -111,20 +111,20 @@ export const useStyles = createUseStyles({
                 cursor: 'pointer',
             },
             '& span': {
-                fontSize: 14,
+                fontSize: 13,
                 fontWeight: 600,
                 opacity: 0.7,
             },
             '& .video-icon': {
-                fontSize: 25,
+                fontSize: 23,
                 color: 'red'
             },
             '& .file-icon': {
-                fontSize: 25,
+                fontSize: 23,
                 color: 'green'
             },
             '& .smile-icon': {
-                fontSize: 25,
+                fontSize: 23,
                 color: 'orange'
             },            
     },
