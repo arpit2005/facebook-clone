@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router } from '@reach/router';
 import Header from './components/Header';
 import Dash from './components';
 
@@ -22,7 +22,6 @@ function App() {
   }, []);
 
   const screenSize = () => {
-    console.log(window.innerWidth);
     if (window.innerWidth > 1280) {
       setDevice('lg');
     } else if (window.innerWidth > 1024) {
@@ -39,12 +38,14 @@ function App() {
   window.addEventListener('resize', screenSize);
   
   return (
-    <Router>
+    <>
       <Header device={device} />
-      <Route path="/">
-        <Dash device={device} />
-      </Route>
-    </Router>
+      <Router>
+        <Dash exact path="/" page="home" device={device} />
+        <Dash path="/friends" page="friends" device={device} />
+        <Dash path="/about" page="about" device={device} />
+      </Router>
+    </>
   );
 }
 

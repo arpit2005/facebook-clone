@@ -24,7 +24,7 @@ export const useStyles = createUseStyles({
     searchBar: {
         position: 'relative',
         flexBasis: (device) => {
-            if (device === 'xs' || device === 'sm') return '10%';
+            if (device === 'mobile' || device === 'xs' || device === 'sm') return '10%';
                 return '23.5%';
         },
         '& .fa-search': {
@@ -39,18 +39,18 @@ export const useStyles = createUseStyles({
         cursor: 'pointer',
         background: '#f0f2f5',
         width: (device) => {
-            if (device === 'xs' || device === 'sm') return 20;
+            if (device === 'mobile' || device === 'xs' || device === 'sm') return 20;
                 return 235;
         },
         padding: 12,
         paddingLeft: (device) => {
-            if (device === 'xs' || device === 'sm') return 28;
+            if (device === 'mobile' || device === 'xs' || device === 'sm') return 28;
                 return 32;
         },
         border: 'none',
         outline: 'none',
         borderRadius: (device) => {
-            if (device === 'xs' || device === 'sm') return '50%';
+            if (device === 'mobile' || device === 'xs' || device === 'sm') return '50%';
                 return 100;
         },
         fontSize: 15,
