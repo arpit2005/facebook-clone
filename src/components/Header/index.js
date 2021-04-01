@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { navigate } from '@reach/router';
 import { useStyles } from '../../styles/Header/HeaderStyles';
 import Logo from '../../assets/Facebook_Logo.png';
 import Avatar from '../../assets/avatar.jpg';
+
+const userSettings = (
+    <div style={{ width: 350, height: 420, backgroundColor: 'white', borderRadius: 10, position: 'absolute', right: 5, top: 45, border: '1px solid rgba(0,0,0,0.1)', boxShadow: '1px 1px 5px rgba(0,0,0,0.2)' }}>
+        <div style={{ position: 'relative' }}>
+            
+        </div>
+    </div>
+);
     
 function Header({ device }) {
     const classes = useStyles(device);
+    const [showUserSetting, setShowUserSetting] = useState(false);
+
+    const showUserSettingHandler = () => {
+        setShowUserSetting(!showUserSetting);
+    }
 
     return ( 
         <div className={classes.headerBody}>
@@ -39,7 +52,8 @@ function Header({ device }) {
                 <button><i className="fa fa-plus" /></button>
                 <button><i className="fa fa-comment" /></button>
                 <button><i className="fa fa-bell" /></button>
-                <button><i className="fa fa-caret-down" /></button>
+                <button onClick={showUserSettingHandler}><i className="fa fa-caret-down" /></button>
+                { showUserSetting && userSettings}
             </div>
         </div>
     );
