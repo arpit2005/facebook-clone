@@ -24,6 +24,7 @@ export const useStyles = createUseStyles({
         marginBottom: 20,
     },
     listItem: {
+        cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
         padding: '8px 5px 8px 10px',

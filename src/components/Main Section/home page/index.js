@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStyles } from '../../../styles/Main Section/MainSectionStyles';
+import { useStyles } from '../../../styles/Main Section/homeMainSectionStyles';
 import Picture from '../../../assets/avatar.jpg';
 import LikeIcon from '../../../assets/like.png';
 import LoveIcon from '../../../assets/love.png';

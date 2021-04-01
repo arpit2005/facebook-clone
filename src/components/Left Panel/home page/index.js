@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStyles } from '../../../styles/Left Panel/LeftPaneStyles';
+import { useStyles } from '../../../styles/Left Panel/homeLeftPaneStyles';
 import avatar from '../../../assets/avatar.jpg';
 import { list } from '../list';
 

@@ -46,7 +46,8 @@ export const useStyles = createUseStyles({
         marginTop: 20,
         borderRadius: 10,
         width: (device) => {
-            if (device === 'xs') return '98%';
+            if (device === 'xs') return '90%';
+            if (device === 'mobile') return '90%';
             return 600;
         },
         paddingTop: 5,
@@ -139,7 +140,8 @@ export const useStyles = createUseStyles({
     postsContainer: {
         margin: '20px 0 ',
         width: (device) => {
-            if (device === 'xs') return '98%';
+            if (device === 'xs') return '90%';
+            if (device === 'mobile') return '90%';
             return 600;
         },
         backgroundColor: 'white',
