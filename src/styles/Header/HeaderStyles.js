@@ -89,15 +89,19 @@ export const useStyles = createUseStyles({
             width: 40,
             height: 40,
             borderRadius: '50%',
+            '&:hover': {
+                backgroundColor: 'rgba(0,0,0,0.2)'
+            }
         }
     },
     userBlock: {
+        cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
         '& img': {
-            width: 35,
-            height: 35,
-            borderRadius: '50%'
+            width: 28,
+            height: 28,
+            borderRadius: '50%',            
         },
         '& span': {
             fontWeight: 600
